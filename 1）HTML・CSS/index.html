@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="HTML,CSS_gridUI">
+    <title>gridBox</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <section class="gridBox" id="gridBox">
+        <form class="gridForm">
+            <select id="js-gridSlc">
+                <option id="js-gridOpt1" value="gridUi1" data-grid="1">横4 × 縦4</option>
+                <option id="js-gridOpt2" value="gridUi1" data-grid="2">横2 × 縦2</option>
+                <option id="js-gridOpt3" value="gridUi1" data-grid="3">横6 × 縦1</option>
+                <option id="js-gridOpt4" value="gridUi1" data-grid="4">可変式</option>
+            </select>
+        </form>
+        <div class="content" id="js-boxContainer"></div>
+    </section>
+    <script src="./main.js"></script>
+</body>
+</html>
