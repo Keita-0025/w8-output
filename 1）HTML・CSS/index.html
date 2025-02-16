@@ -9,14 +9,17 @@
 </head>
 <body>
     <section class="gridBox" id="gridBox">
-        <form class="gridForm">
-            <select id="js-gridSlc">
-                <option id="js-gridOpt1" value="gridUi1" data-grid="1">横4 × 縦4</option>
-                <option id="js-gridOpt2" value="gridUi1" data-grid="2">横2 × 縦2</option>
-                <option id="js-gridOpt3" value="gridUi1" data-grid="3">横6 × 縦1</option>
-                <option id="js-gridOpt4" value="gridUi1" data-grid="4">可変式</option>
-            </select>
-        </form>
+        <header class="gridBox-head">
+            <form class="gridForm">
+                <select class="select" id="js-gridSlc">
+                    <option id="js-gridOpt1" value="gridUi1" data-grid="1">横4 × 縦4</option>
+                    <option id="js-gridOpt2" value="gridUi1" data-grid="2">横2 × 縦2</option>
+                    <option id="js-gridOpt3" value="gridUi1" data-grid="3">横6 × 縦1</option>
+                    <option id="js-gridOpt4" value="gridUi1" data-grid="4">可変式</option>
+                </select>
+            </form>
+            <button class="btn header-btn">log out</button>
+        </header>
         <div class="content" id="js-boxContainer"></div>
     </section>
     <script src="./main.js"></script>

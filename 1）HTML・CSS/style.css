@@ -1,55 +1,74 @@
+.gridBox-head {
+  display: flex;
+  justify-content: space-between;
+  align-self: center;
+  margin: 50px 20px 40px;
+}
 
-.pridForm {
-    margin: 20px 20px 20px;
+.header-btn {
+  height: 30px;
+  width: 100px;
+  border: none;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(11, 7, 255);
+  color: aliceblue;
+  cursor: pointer;
+  transition: box-shadow 0.3s ease;
+}
+
+.header-btn:hover {
+  opacity: 0.8;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.select {
+  cursor: pointer;
 }
 
 .content {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
-    display: grid; /* グリッドレイアウトを使用 */
-    gap: 0px; /* ボックス間の隙間 */
-    background-color: rgb(13, 53, 175);
+  display: grid; /* グリッドレイアウトを使用 */
+  gap: 0px; /* ボックス間の隙間 */
+  background-color: rgb(13, 53, 175);
 }
 .box {
-    border: solid 2px transparent;
-    background-color: rgb(86, 178, 232,3);
-    color: white;
-    border-radius: 15px;
-    text-align: center;
-    margin: 20px;
-    height: 80px;
-    width: auto;
-    min-width: 100px;
-    display: flex; /* フレックスボックスを使用 */
-    justify-content: center; /* 水平方向の中央揃え */
-    align-items: center; /* 垂直方向の中央揃え */
+  border: solid 2px transparent;
+  background-color: rgb(86, 178, 232, 3);
+  color: white;
+  border-radius: 15px;
+  text-align: center;
+  margin: 20px;
+  height: 80px;
+  width: auto;
+  min-width: 100px;
+  display: flex; /* フレックスボックスを使用 */
+  justify-content: center; /* 水平方向の中央揃え */
+  align-items: center; /* 垂直方向の中央揃え */
 }
 
 /* 4×4のグリッド用 */
 .grid-4 {
-    /* 4列のグリッド */
-    grid-template-columns: repeat(4, 1fr); 
+  /* 4列のグリッド */
+  grid-template-columns: repeat(4, 1fr);
 }
 
 /* 2×2のグリッド用 */
 .grid-2 {
-     /* 2列のグリッド */
-    grid-template-columns: repeat(2, 1fr); 
+  /* 2列のグリッド */
+  grid-template-columns: repeat(2, 1fr);
 }
 
 /* 1×6のグリッド用 */
 .grid-1 {
-     /* 1行のフレックスボックス */
-    display: flex; /* フレックスボックスを使用 */
-    flex-direction: row; /* 横方向に並べる */
-    align-items: center;
-    justify-content: space-between;
-    gap: 10px; /* ボックス間の隙間 */
+  /* 1行のフレックスボックス */
+  display: flex; /* フレックスボックスを使用 */
+  flex-direction: row; /* 横方向に並べる */
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px; /* ボックス間の隙間 */
 }
 
 .flexible {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
