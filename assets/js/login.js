@@ -31,7 +31,7 @@ const $signUp = document.querySelector('#js-signup');
 const handleSignUpClick = (e) => {
     e.preventDefault();
     const isAuthenticated = localStorage.isAuthenticated === 'true';
-    if (isAuthenticated === 'true' && confirm('前回のログイン情報を使ってログインしますか？')) {
+    if (isAuthenticated && confirm('前回のログイン情報を使ってログインしますか？')) {
         //isAuthenticatedがtrueの場合、index.htmlに遷移する
         redirectToHomePage();
     } else {
