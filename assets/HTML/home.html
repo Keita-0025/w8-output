@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Le'sGridLayout_singInPage</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+
+<body>
+    <section class="login" id="loginSection">
+        <h2 class="login-title">Sign in to your account</h2>
+        <form id="js-loginForm">
+            <label class="loginForm-label" for="js-username">Your email</label>
+            <!-- 擬似的に入力している -->
+            <input class="loginForm-input" type="email" id="js-username" value='k@exanple.com' required>
+            <label class="loginForm-label" for="js-password">Password</label>
+            <!-- 擬似的に入力している -->
+            <input class="loginForm-input" type="password" id="js-password" value='password' required>
+            <button class="btn login-btn" type="submit" id="js-btn">Sign in</button>
+        </form>
+        <div class="login-msg" id="loginMessage">Don't have an account yet? <a class="signup" id="js-signup" href="../../index.html">Sing up</a></div>
+    </section>
+    <script src="../js/login.js"></script>
+</body>
+
+</html>

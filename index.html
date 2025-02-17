@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="home page">
+    <title>Le'sGridLayout_homepage</title>
+    <link rel="stylesheet" href="./assets/CSS/style.css">
+</head>
+
+<body>
+    <section class="main" id="js-gridBox">
+        <header class="gridBox-head">
+            <h1 class="title">Le'sGridLayout!!!</h1>
+            <button class="btn header-btn" id="js-logoutBtn">log out</button>
+        </header>
+        <form class="gridForm">
+            <select class="select" id="js-gridSlc">
+                <option id="js-gridOpt1" value="gridUi1" data-grid="1">横4 × 縦4</option>
+                <option id="js-gridOpt2" value="gridUi1" data-grid="2">横2 × 縦2</option>
+                <option id="js-gridOpt3" value="gridUi1" data-grid="3">横6 × 縦1</option>
+                <option id="js-gridOpt4" value="gridUi1" data-grid="4">可変式</option>
+            </select>
+        </form>
+
+
+        <section class="content" id="js-boxContainer"></section>
+        <button class="btn login-btn " type="submit" id="js-loginBtn">sign in</button>
+        
+    </section>
+    <script src="./assets/js/logout.js"></script>
+    <script src="./assets/js/main.js"></script>
+</body>
+
+</html>

@@ -1,19 +1,16 @@
 //sectionDOM
-const $mainContent = document.querySelector('#gridBox');
+const $mainContent = document.querySelector('#js-gridBox');
 //selectDOM
 const $select = document.querySelector('#js-gridSlc');
 //All optionDOM
 const $options = $select.querySelectorAll('[id ^= "js-gridOpt"]');
-console.log('$mainContent', $mainContent, '$select', $select, '$options', $options);
 
 //選択されたselectの内容により処理を分岐する関数（ハンドラー）
 const changeHandler = (e) => {
     const selDg = e.currentTarget.options[e.currentTarget.selectedIndex].getAttribute('data-grid');
-    console.log('selDg', selDg, e.currentTarget);
 
     // ボックスを作成するための親要素を取得
     const $boxContainer = document.getElementById('js-boxContainer');
-    console.log('$boxContainer', $boxContainer)
 
     // 既存のボックスをクリア
     $boxContainer.innerHTML = '';
@@ -60,12 +57,31 @@ const changeHandler = (e) => {
             box.textContent = String(i + 1).padStart(2, '0');
             $boxContainer.appendChild(box);
         }
+        alert('画面の大きさを変更してみて下さい')
     }
 }
-
-
 // 初期表示のためにchangeHandlerを呼び出す
 changeHandler({ currentTarget: $select });
 
-// イベントリスナーを追加
-$select.addEventListener('change', changeHandler);
+
+// セレクトボタンのイベントリスナーを追加
+$select.addEventListener('change', (e) => {
+    const isAuthenticated = localStorage.getItem('isAuthenticated');
+
+    if (!isAuthenticated || isAuthenticated !== 'true') {
+        e.preventDefault();
+        $select.disabled = true; // セレクトボタンを無効化
+        console.log('call change!!!')
+        alert('ログインが必要です。');
+    } else {
+        changeHandler(e); // 認証されている場合の処理
+        $select.disabled = false; // セレクトボタンを有効化
+    }
+});
+
+//ログインボタン
+const $loginBtn = document.querySelector('#js-loginBtn')
+$loginBtn.addEventListener('click', () => {
+    //ログイン画面に遷移
+    window.location.href = './assets/HTML/home.html'
+})
